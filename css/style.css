@@ -27,6 +27,7 @@ body {
     width: 730px;
     border-radius: 10px;
     background-color: white;
+    position: relative;
 }
 
 .main .left {
@@ -49,11 +50,177 @@ body {
 .main .right .title {
     color: var(--very-dark-grayish-blue);
     font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
 }
 
 .main .right .description {
     color: var(--desaturated-dark-blue);
     font-size: 13px;
-    margin-top: 15px;
+    margin-top: 12px;
     line-height: 20px;
+}
+.main .right .description br {
+    display: none;
+}
+
+.main .right .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main .right .footer-right .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main .right .footer-right .profile .account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.main .right .footer-right .profile .account img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main .right .footer-right .profile .account .stats .name {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.main .right .footer-right .profile .account .stats .date {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--grayish-blue);
+}
+
+.main .right .footer-right .profile .share {
+    background-color: var(--light-grayish-blue);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .right .footer-right .profile .share:hover {
+    cursor: pointer;
+}
+
+
+.main .share-icons {
+    background-color: var(--very-dark-grayish-blue);
+    width: 245px;
+    height: 50px;
+    position: absolute;
+    bottom: 95px;
+    right: -60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    transition: all .4s ease-in-out;
+}
+
+.main .share-icons::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: var(--very-dark-grayish-blue);
+    position: absolute;
+    bottom: -10px;
+    right: 105px;   
+    color: white;
+}
+
+.share-icons .share-title {
+    text-transform: uppercase;
+    color: var(--grayish-blue);
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+.main .hidden {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    .main {
+        flex-direction: column;
+        height: 510px;
+        width: 325px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+    }
+    .main .left {
+        height: 200px;
+        width: 325px;
+        overflow: hidden;
+        position: relative;
+    }
+    .main .left img {
+        position: absolute;
+        height: 280px;
+        top: -20px;
+        width: 100%;
+        border-radius: 0;
+    } 
+    .main .right {
+        width: 325px;
+        height: 300px;
+        border-radius: 0 10px 10px 0;
+        background-color: white;
+        padding: 33px;
+    }
+    .main .right .title {
+        color: var(--very-dark-grayish-blue);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        margin-top: 7px;
+    }
+    .main .right .description br {
+        display: block;
+    }
+    .main .share-icons {
+        width: 325px;
+        height: 70px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding-left: 35px;
+        gap: 16px;
+        transition: all .4s ease-in-out;
+    }
+    .main .right .footer-right .profile .share {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom: -11px;
+        z-index: 1;
+    }
+    .main .hidden {
+        display: none;
+    }
 }
